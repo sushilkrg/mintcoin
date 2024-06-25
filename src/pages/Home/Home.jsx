@@ -18,8 +18,8 @@ const Home = () => {
 
     const searchHandler = async (e) => {
         e.preventDefault();
-        const coins = await allCoin.filter((item) => {
-            return item.name.toLowerCase().includes(inputVal.toLowerCase());
+        const coins = await allCoin?.filter((item) => {
+            return item?.name?.toLowerCase().includes(inputVal?.toLowerCase());
         })
         setDisplayCoin(coins);
     }
@@ -39,7 +39,7 @@ const Home = () => {
                     <input onChange={inputHandler} list='coinlist' value={inputVal} type="text" placeholder="Search crypto.." required />
 
                     <datalist id="coinlist">
-                        {allCoin.map((item, index) => (<option key={index} value={item.name}/>))}
+                        {allCoin?.map((item, index) => (<option key={index} value={item?.name}/>))}
                     </datalist>
 
                     <button type="submit">Search</button>
@@ -56,7 +56,7 @@ const Home = () => {
                 </div>
                 {
                     displayCoin.slice(0, 10).map((item, index) => (
-                        <Link to={`/coin/${item.id}`} className="table-layout" key={index}>
+                        <Link to={`/coin/${item?.id}`} className="table-layout" key={index}>
                             <p>{item?.market_cap_rank}</p>
                             <div>
                                 <img src={item?.image} alt="img" />
