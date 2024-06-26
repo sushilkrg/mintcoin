@@ -30,6 +30,8 @@ const CoinContextProvider = (props) => {
         allCoin, currency, setCurrency
     }
 
+    console.log(allCoin);
+
     return (
         <CoinContext.Provider value={contextValue}>
             {props.children}
