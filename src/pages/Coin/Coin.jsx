@@ -41,8 +41,8 @@ const Coin = () => {
   }, [currency])
 
 
-  // if(!coinData || !historicalData ){
-  if (!coinData) {
+  if(!coinData || !historicalData ){
+  // if (!coinData) {
     return (
       <div className="spinner">
         <div className="spin"></div>
